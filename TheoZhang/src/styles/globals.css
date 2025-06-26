@@ -1,0 +1,297 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@iconify/tailwind4";
+@import "tailwindcss-animated";
+@plugin '../lib/hero.ts';
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@import "bytemd/dist/index.css";
+@import './github.css';
+@import './github-dark.css';
+@import "./custom.css";
+@import "./custom-dark.css";
+@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:is(.dark *)); */
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+
+@theme {
+  --color-primary: #18181B;
+  --color-darkprimary: #FAFAFA;
+
+  --color-secondary: #71717A;
+  --color-darksecondary: #A1A1AA;
+
+  --color-content: #3C3C3CB3;
+  --color-darkContent: #EBEBEB99;
+
+  --color-bgPrimary: #FFFFFF;
+  --color-lighterBgPrimary: #F9F9F9;
+  --color-darkBgPrimary: #1A1A1A;
+  --color-darkerBgPrimary: #242424;
+
+  --color-activeColor: #F4F4F5;
+  --color-darkActiveColor: #27272A;
+
+  --color-hoverColor: #F4F4F5;
+  --color-darkHoverColor: #27272A;
+
+  --color-borderColor: #E3E3E4;
+  --color-darkBorderColor: #27272A;
+
+  --color-tableHoverColor: #FAFAFA;
+  --color-tableSelectColor: #F4F4F5;
+  --color-darkTableColor: #27272A;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* 设置文档的最大宽度 */
+  --spacing-detail-content: 812px;
+
+  --shadow-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+  /* md-style */
+  --color-foreground: #09090b;
+  --color-background: #ffffff;
+  --color-muted: #f4f4f5;
+  --color-muted-foreground: #71717a;
+  --color-border: #e4e4e7;
+  --color-accent: #f4f4f5;
+
+
+  /* 动画 */
+  --animate-fade-down: fade-down 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-sheet-fade-in: sheet-fade-in 0.5s cubic-bezier(0.31, 0.00, 0.00, 1.00);
+  --animate-sheet-fade-out: sheet-fade-out 0.5s cubic-bezier(1.00, 0.00, 0.70, 0.99);
+  --animate-sheetOverlay-fade-in: sheetOverlay-fade-in 0.5s cubic-bezier(0.31, 0.00, 0.00, 1.00);
+  --animate-sheetOverlay-fade-out: sheetOverlay-fade-out 0.5s cubic-bezier(1.00, 0.00, 0.70, 0.99);
+  --animate-opacity-in: opacity-in 0.3s ease-out;
+  --animate-opacity-out: opacity-out 0.3s ease-out;
+  --animate-scroll-mouse: scroll-mouse 3s ease-out infinite;
+  --animate-rolling-text: rolling-text 4s infinite;
+  --animate-scroll-to-left: scroll-to-left 60s linear infinite;
+
+  @keyframes scroll-mouse {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+
+    20% {
+      transform: translateY(2px);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(8px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes opacity-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes opacity-out {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes sheet-fade-in {
+    0% {
+      transform: translateX(-80vh);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes sheet-fade-out {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-80vh);
+    }
+  }
+
+  @keyframes sheetOverlay-fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes sheetOverlay-fade-out {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes scroll-to-left {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes rolling-text {
+    10% {
+      -webkit-transform: translateY(-102%);
+      transform: translateY(-102%);
+    }
+
+    25% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+
+    35% {
+      -webkit-transform: translateY(-202%);
+      transform: translateY(-202%);
+    }
+
+    50% {
+      -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+    }
+
+    60% {
+      -webkit-transform: translateY(-302%);
+      transform: translateY(-302%);
+    }
+
+    75% {
+      -webkit-transform: translateY(-300%);
+      transform: translateY(-300%);
+    }
+
+    85% {
+      -webkit-transform: translateY(-402%);
+      transform: translateY(-402%);
+    }
+
+    100% {
+      -webkit-transform: translateY(-400%);
+      transform: translateY(-400%);
+    }
+  }
+}
+
+
+@layer utilities {
+  .noscrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .noscrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+  }
+
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+  }
+}
+
+
+@layer base {
+  :root {}
+
+  .light {
+    --scrollBarTrackColor: #F9F9F9;
+    --scrollBarThumbColor: #E4E4E7;
+
+  }
+
+  .dark {
+    --scrollBarTrackColor: #242424;
+    --scrollBarThumbColor: #27272A;
+  }
+}
+
+/* 主要设置表格的样式 */
+@layer components {
+  :where(th label svg) {
+    @apply text-primary;
+  }
+
+  :where(th label span)::after {
+    @apply  !bg-bgPrimary;
+  }
+
+  .dark :where(th label svg) {
+    @apply text-darkprimary;
+  }
+
+  .dark :where(th label span)::after {
+    @apply  !bg-darkBgPrimary;
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 10%
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollBarTrackColor);
+  border-radius: 10px;
+}
+
+/* 滚动条的滑轨背景颜色 */
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollBarThumbColor);
+  border-radius: 10px;
+}
+
+@import "./custom.css";
