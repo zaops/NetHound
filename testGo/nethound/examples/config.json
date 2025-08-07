@@ -1,0 +1,15 @@
+{
+  "targets": [
+    "baidu.com:80",
+    "google.com:443",
+    "8.8.8.8:53"
+  ],
+  "test_type": "all",
+  "output": "json",
+  "concurrency": 20,
+  "telnet_timeout": 3000,
+  "read_timeout": 1000,
+  "ping_count": 1,
+  "verbose": false,
+  "no_color": false
+}

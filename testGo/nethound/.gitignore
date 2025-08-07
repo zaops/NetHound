@@ -1,0 +1,44 @@
+# 可执行文件
+*.exe
+nethound
+nethound-*
+
+# 构建输出
+build/
+dist/
+
+# 测试结果文件
+nethound_result_*.json
+nethound_result_*.csv
+nethound_result_*.html
+
+# 配置文件（可选，根据需要调整）
+nethound.json
+
+# Go 相关
+*.log
+*.out
+*.test
+*.prof
+
+# IDE 相关
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.temp
+
+# 依赖管理
+vendor/
+
+# 测试覆盖率
+coverage.out
+coverage.html
