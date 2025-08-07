@@ -20,7 +20,7 @@ Nethound 是一个轻量级、高性能的网络连通性测试工具，支持�
 
 ### 下载安装
 
-从 [Releases](https://github.com/your-repo/nethound/releases) 页面下载对应平台的可执行文件：
+从 [Releases](https://github.com/zaops/NetHound/releases) 页面下载对应平台的可执行文件：
 
 - Windows: `nethound-windows-amd64.exe`
 - Linux: `nethound-linux-amd64`
@@ -73,7 +73,7 @@ Nethound 是一个轻量级、高性能的网络连通性测试工具，支持�
 ### 克隆项目
 
 ```bash
-git clone https://github.com/your-repo/nethound.git
+git clone https://github.com/zaops/NetHound.git
 cd nethound
 ```
 
@@ -100,7 +100,6 @@ GOOS=linux go build -o nethound
 
 # 生成的文件在 build/ 目录下：
 # - nethound-windows-amd64.exe
-# - nethound-windows-arm64.exe  
 # - nethound-linux-amd64
 # - nethound-linux-arm64
 ```
